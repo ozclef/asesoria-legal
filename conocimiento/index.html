@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oscar Cruz — Gestor Administrativo & Analista Documental</title>
+  <meta name="description" content="Gestor administrativo y documental. Especialista en procesos civiles, documentación probatoria y legalidad digital." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#98a0b3; --accent:#6ee7b7; --glass: rgba(255,255,255,0.03);
+      --radius:14px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071022 0%,var(--bg) 100%);color:#e6eef8}
+    .wrap{max-width:980px;margin:40px auto;padding:28px}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:78px;height:78px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#8bd5ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:6px 0 18px}
+
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6);margin-bottom:18px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .wrap{margin:20px;padding:16px}}
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600;font-size:13px}
+    .meta{color:var(--muted);font-size:13px}
+
+    .services{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .service{flex:1 1 180px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px}
+    .service h4{margin:0 0 6px}
+
+    .case{border-left:3px solid rgba(255,255,255,0.04);padding-left:12px;margin-bottom:12px}
+    .case small{color:var(--muted)}
+
+    .cta{display:flex;gap:10px;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#7ae0ff);color:#042}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* simple form */
+    form .row{display:flex;gap:10px;margin-bottom:10px}
+    input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px}
+
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="avatar">OC</div>
+      <div>
+        <h1>Oscar Cruz — Gestor administrativo y analista documental</h1>
+        <p class="lead">Especialista en documentación legal, procesos civiles y legalidad digital. Organizo expedientes, preparo pruebas y transformo experiencias prácticas en resultados verificables.</p>
+        <div class="meta"><span class="badge">Gestor Administrativo</span> <span style="margin-left:8px" class="pill">Analista Documental</span> <span style="margin-left:8px" class="pill">Legalidad Digital</span></div>
+
+        <!-- Nuevo bloque: Manifiesto profesional y filosofía neutral -->
+        <div style="margin-top:12px; padding:12px; border-radius:10px; background:rgba(255,255,255,0.02)">
+          <strong>Manifiesto:</strong>
+          <p style="margin:6px 0" class="meta">Creo en el derecho que nace de la verdad, no del poder. Documentar es un acto de justicia. Actúo desde la neutralidad: sin juicios anticipados, buscando equidad y apego estricto a normas y protocolos.</p>
+          <p style="margin:6px 0" class="meta">Mi enfoque combina rigor técnico, pensamiento estratégico y compromiso ético. Nada es bueno ni malo por sí mismo; todo se evalúa desde la evidencia y la búsqueda de soluciones justas.</p>
+        </div>
+
+        <!-- Inspiraciones rápidas -->
+        <div style="margin-top:10px">
+          <em class="meta">Inspiraciones:</em>
+          <div class="meta" style="margin-top:6px">Platón • Ada Lovelace • Benjamin Franklin • Nikola Tesla • Hikaru Nakamura • Magnus Carlsen • Anish Giri • Anatoly Karpov</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid" style="margin-top:18px">
+      <section>
+        <div class="card">
+          <h3>Servicios</h3>
+          <div class="services">
+            <div class="service">
+              <h4>Gestoría documental</h4>
+              <p class="meta">Recolección, orden y presentación de pruebas y expedientes para trámites civiles.</p>
+            </div>
+            <div class="service">
+              <h4>Preparación de expedientes</h4>
+              <p class="meta">Redacción y estructuración de actas, escritos y resúmenes procesales legibles y verificables.</p>
+            </div>
+            <div class="service">
+              <h4>Asesoría técnica</h4>
+              <p class="meta">Análisis documental, verificación de evidencia y preparación para entrega a autoridades o abogados.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Casos & Proyectos</h3>
+          <div class="case">
+            <strong>Respaldo documental de posesión (Proyecto familiar)</strong>
+            <div><small>Rol: Gestor documental y testigo técnico — 2024</small></div>
+            <p class="meta">Reuní, verifiqué y estructuré la evidencia (recibos, actas, fotografías y comunicaciones) que respaldó la posesión legítima de un inmueble familiar y facilitó su defensa administrativa.</p>
+          </div>
+
+          <div class="case">
+            <strong>Registro de incidente con autoridad</strong>
+            <div><small>Rol: Documentador y redactor de queja — 2025</small></div>
+            <p class="meta">Documenté hora, placas y testigos de un incidente vial y redacté la queja formal para presentación ante autoridades competentes.</p>
+          </div>
+
+          <div class="case">
+            <strong>Bitácora de procesos</strong>
+            <div><small>Rol: Autor y curador</small></div>
+            <p class="meta">Creación de una bitácora (registro cronológico) que sirve como "tesis simbólica" de metodologías aplicadas en documentación y verificación.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Portafolio & Blog</h3>
+          <p class="meta">Publico artículos breves y notas técnicas: "Mi primer caso: respaldo documental", "Cómo preparar una queja a la fiscalía" y entradas de aprendizaje práctico. Perfecto para mostrar tu experiencia sin ser abogado.</p>
+          <div style="margin-top:10px">
+            <button class="btn btn-primary" onclick="alert('Descarga de CV (simulada)')">Descargar CV</button>
+            <button class="btn btn-ghost" onclick="location.href='#contact'">Contactar</button>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Contacto rápido</h3>
+          <p class="meta">¿Necesitas que prepare un expediente, redacte una queja o arme tu portafolio? Escríbeme.</p>
+          <form id="contact" onsubmit="event.preventDefault(); alert('Mensaje enviado (simulado). Revisa tu correo.');">
+            <div class="row"><input placeholder="Nombre" required></div>
+            <div class="row"><input placeholder="Correo o WhatsApp" required></div>
+            <div class="row"><textarea placeholder="Mensaje breve"></textarea></div>
+            <div style="display:flex;gap:8px"><button class="btn btn-primary" type="submit">Enviar</button><button class="btn btn-ghost" type="button" onclick="location.href='mailto:ocruzdemo@example.com'">Enviar email</button></div>
+          </form>
+        </div>
+
+        <div class="card">
+          <h3>Habilidades principales</h3>
+          <ul class="meta" style="padding-left:16px;margin:8px 0">
+            <li>Gestión y organización de expedientes</li>
+            <li>Redacción y síntesis documental</li>
+            <li>Registro y verificación de evidencia</li>
+            <li>Asesoría práctica para trámites civiles</li>
+            <li>Portafolio digital y presencia web</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Pequeños recordatorios</h3>
+          <p class="meta">Guarda siempre: placas, hora, lugar, testigos y copias digitales. Firma tus propios resúmenes y pide sellos o acuses cuando entregues documentos.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="meta">© 2025 Oscar Cruz — Gestor administrativo y documental. Este sitio es un portafolio conceptual.</div>
+    </footer>
+  </main>
+
+</body>
+</html>
