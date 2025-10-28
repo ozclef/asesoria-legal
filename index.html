@@ -58,28 +58,10 @@
         <div class="meta"><span class="badge">Gestor Administrativo</span> <span style="margin-left:8px" class="pill">Analista Documental</span> <span style="margin-left:8px" class="pill">Legalidad Digital</span></div>
       </div>
     </header>
-    <div>
-      💼 TÍTULOS O DESCRIPCIONES PROFESIONALES QUE TE QUEDAN PERFECTAS
 
-Gestor Administrativo y Documental
 
-Ideal para alguien que sabe reunir, estructurar y presentar documentación legal o técnica.
-(Así podrías mostrar tu experiencia en trámites, actas, pruebas, registros, etc.)
 
-Consultor Independiente en Documentación Legal y Procesos Civiles
-
-Más elegante, refleja que sabes orientar, aunque no litigues.
-Suena profesional, serio y muy útil para ofrecer servicios.
-
-Analista Documental y Asesor Técnico
-
-Enfocado en tu capacidad para analizar casos, redactar, investigar y organizar expedientes.
-Te da una imagen de “profesional con visión técnica y mentalidad crítica”.
-
-Gestor Legal Digital
-
-Más moderno, si piensas unir tu conocimiento legal con tecnología o sitios web.
-    </div>
+    
 
     <div class="grid" style="margin-top:18px">
       <section>
@@ -167,5 +149,77 @@ Más moderno, si piensas unir tu conocimiento legal con tecnología o sitios web
     </footer>
   </main>
 
+
+
+  <!-- Inserta en tu index.html donde quieras la lista de repos -->
+<section id="portfolio">
+  <h2>Portafolio — Proyectos públicos</h2>
+  <p class="meta">Aquí aparecen mis repositorios públicos. Haz clic para ver el código o la página de demo (si existe).</p>
+  <div id="repos-list">Cargando repositorios…</div>
+</section>
+
+<script>
+  // Cambia 'ozclef' por tu usuario si difiere
+  const GITHUB_USER = 'ozclef';
+  const container = document.getElementById('repos-list');
+
+  async function fetchRepos() {
+    try {
+      const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100`);
+      const repos = await res.json();
+      if (!Array.isArray(repos)) throw new Error('No se obtuvieron repos');
+      // ordenar por fecha (reciente primero)
+      repos.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
+      container.innerHTML = repos.map(r => {
+        const pagesUrl = `https://${GITHUB_USER}.github.io/${r.name}/`;
+        const pagesLink = `<a href="${pagesUrl}" target="_blank" rel="noopener">Página</a>`;
+        return `
+          <div style="padding:8px;margin-bottom:6px;border-radius:8px;background:rgba(0,0,0,0.04)">
+            <strong><a href="${r.html_url}" target="_blank" rel="noopener">${r.name}</a></strong>
+            <div class="meta" style="font-size:13px">${r.description || '— sin descripción —'}</div>
+            <div style="margin-top:6px;font-size:13px">
+              <a href="${r.html_url}" target="_blank" rel="noopener">Código</a>
+              &nbsp;•&nbsp;
+              <a href="${pagesUrl}" target="_blank" rel="noopener" onerror="this.style.display='none'">Demo</a>
+              &nbsp;•&nbsp;
+              <span style="color:#888">Actualizado: ${new Date(r.updated_at).toLocaleDateString()}</span>
+            </div>
+          </div>`;
+      }).join('');
+    } catch(e) {
+      container.innerHTML = `<div class="meta">No se pudieron cargar los repositorios. Intenta recargar o revisa la consola. (${e.message})</div>`;
+      console.error(e);
+    }
+  }
+
+  fetchRepos();
+</script>
+
 </body>
 </html>
+<!---
+
+
+
+    <div>
+      💼 TÍTULOS O DESCRIPCIONES PROFESIONALES QUE TE QUEDAN PERFECTAS
+
+Gestor Administrativo y Documental
+
+Ideal para alguien que sabe reunir, estructurar y presentar documentación legal o técnica.
+(Así podrías mostrar tu experiencia en trámites, actas, pruebas, registros, etc.)
+
+Consultor Independiente en Documentación Legal y Procesos Civiles
+
+Más elegante, refleja que sabes orientar, aunque no litigues.
+Suena profesional, serio y muy útil para ofrecer servicios.
+
+Analista Documental y Asesor Técnico
+
+Enfocado en tu capacidad para analizar casos, redactar, investigar y organizar expedientes.
+Te da una imagen de “profesional con visión técnica y mentalidad crítica”.
+
+Gestor Legal Digital
+
+Más moderno, si piensas unir tu conocimiento legal con tecnología o sitios web.
+    </div>
